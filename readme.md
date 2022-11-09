@@ -18,7 +18,7 @@
 
 ## Custom Video Player
 
-<!-- <img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/weather_app/screen_shot_1.png" /> -->
+<!-- <img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/form_validator/form.png" /> -->
 
 ## Exchange Rate Calculator
 
@@ -26,7 +26,7 @@
 
 ## Form Validator
 
-<!-- <img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/weather_app/screen_shot_1.png" /> -->
+<img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/form_validator/form.png" />
 
 ## Github Finder
 
