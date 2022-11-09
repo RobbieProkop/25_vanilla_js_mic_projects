@@ -1,6 +1,8 @@
-# Movie Seat Selector App
+# 25 Vanilla JavaScript Apps
 
 ### Built entirely with vanilla JS, HTML, and SASS
+
+<p>(For a few projects, I use Bootstrap/skeleton)</p>
 
 ## Calorie Tracker
 
@@ -13,3 +15,27 @@
 ## Weather App
 
 <img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/weather_app/screen_shot_1.png" />
+
+## Custom Video Player
+
+<!-- <img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/weather_app/screen_shot_1.png" /> -->
+
+## Exchange Rate Calculator
+
+<!-- <img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/weather_app/screen_shot_1.png" /> -->
+
+## Form Validator
+
+<!-- <img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/weather_app/screen_shot_1.png" /> -->
+
+## Github Finder
+
+<!-- <img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/weather_app/screen_shot_1.png" /> -->
+
+## Loan Calculator
+
+<!-- <img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/weather_app/screen_shot_1.png" /> -->
+
+## Number Guesser Game
+
+<!-- <img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/weather_app/screen_shot_1.png" /> -->
