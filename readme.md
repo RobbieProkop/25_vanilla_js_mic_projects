@@ -8,4 +8,8 @@
 
 ## Movie Seat Selector
 
-<img src="https://github.com/RobbieProkop/movie_seat_selector_vanilla_js/blob/master/screen1.png" />
+<img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/movie_seat_booking/movie_seat_1.png" />
+
+## Weather App
+
+<img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/weather_app/screen_shot_1.png" />
