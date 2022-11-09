@@ -2,5 +2,5 @@
 <p>Built using only Vanilla JS, and materialize css.</p>
 <p>No Frameworks were harmed in the making of this project ;)</p>
 
-<img src="https://github.com/RobbieProkop/calorie_tracker/blob/master/screen-1.png" />
-<img src="https://github.com/RobbieProkop/calorie_tracker/blob/master/screen-2.png" />
+<img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/calorie_tracker/screen-1.png" />
+<img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/calorie_tracker/screen-2.png" />
