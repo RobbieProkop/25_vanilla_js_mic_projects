@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css"
+      integrity="sha384-z4tVnCr80ZcL0iufVdGQSUzNvJsKjEtqYZjiQrrYKlpGow+btDHDfQWkFjoaz/Zr"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="./public/styles/progress.css" />
+    <link rel="stylesheet" href="./public/styles/styles.css" />
+    <script defer src="./app.js"></script>
+    <script
+      defer
+      src="https://kit.fontawesome.com/d13e26e731.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Custom Video Player</title>
+  </head>
+  <body>
+    <h1>Custom Video Player</h1>
+
+    <video
+      src="./videos/gone.mp4"
+      class="screen"
+      id="video"
+      poster="./img/poster.png"
+    ></video>
+
+    <div class="controls">
+      <button class="btn" id="play">
+        <i class="fa fa-play fa-2x"></i>
+      </button>
+      <button class="btn" id="stop">
+        <i class="fa fa-stop fa-2x"></i>
+      </button>
+      <input
+        type="range"
+        id="progress"
+        class="progress"
+        min="0"
+        max="100"
+        step="0.1"
+        value="0"
+      />
+      <span class="timestamp" id="timestamp">00:00</span>
+    </div>
+  </body>
+</html>
