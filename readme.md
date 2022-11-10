@@ -22,7 +22,7 @@
 
 ## Exchange Rate Calculator
 
-<!-- <img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/weather_app/screen_shot_1.png" /> -->
+<img src="https://github.com/RobbieProkop/25_vanilla_js_micro_projects/blob/master/exchange_rate_calc/img/exchange-screen.png" />
 
 ## Form Validator
 
