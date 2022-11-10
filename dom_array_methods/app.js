@@ -20,7 +20,13 @@ const getRandomUser = async () => {
     name: `${user.name.first} ${user.name.last}`,
     money: Math.floor(Math.random() * 1000000),
   };
-  console.log("newUser :>> ", newUser);
+
+  addData(newUser);
+};
+
+//Add new OBJ to data arr
+const addData = (obj) => {
+  data.push(obj);
 };
 
 getRandomUser();
