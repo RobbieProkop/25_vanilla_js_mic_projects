@@ -21,7 +21,11 @@ const getRandomUser = async () => {
     money: Math.floor(Math.random() * 1000000),
   };
 
+  if (!main.querySelector("h3")) {
+    return addData(newUser);
+  }
   addData(newUser);
+  calculateTotal();
 };
 
 // Double every user's money using MAP
@@ -33,14 +37,14 @@ const doubleMoney = () => {
   updateDom();
 };
 
-//sort the richest
+// SORT the richest
 const sort = () => {
   data = data.sort((a, b) => {
     return b.money - a.money;
   });
   updateDom();
 };
-// sort by poorest
+// SORT by poorest
 const sortReverse = () => {
   data = data.sort((a, b) => {
     return a.money - b.money;
@@ -48,10 +52,21 @@ const sortReverse = () => {
   updateDom();
 };
 
+//FILTER
 const filterMillionaire = () => {
   data = data.filter((millionaire) => millionaire.money > 999999);
-  // return data;
   updateDom();
+};
+
+// REDUCE
+const calculateTotal = () => {
+  let total = data.reduce((acc, user) => (acc += user.money), 0);
+  const wealthEl = document.createElement("div");
+  wealthEl.innerHTML = `<h3>Total Wealth: <strong>${formatMoney(
+    total
+  )}</strong></h3>`;
+
+  main.appendChild(wealthEl);
 };
 
 //Add new OBJ to data arr
@@ -85,3 +100,4 @@ doubleBtn.addEventListener("click", doubleMoney);
 sortBtn.addEventListener("click", sort);
 sortBtn.addEventListener("dblclick", sortReverse);
 showMillionairesBtn.addEventListener("click", filterMillionaire);
+calculateBtn.addEventListener("click", calculateTotal);
