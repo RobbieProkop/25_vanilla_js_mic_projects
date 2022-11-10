@@ -24,12 +24,27 @@ const getRandomUser = async () => {
   addData(newUser);
 };
 
-// Double every user's money
+// Double every user's money using MAP
 const doubleMoney = () => {
   data = data.map((item) => {
     return { ...item, money: item.money * 2 };
   });
 
+  updateDom();
+};
+
+//sort the richest
+const sort = () => {
+  data = data.sort((a, b) => {
+    return b.money - a.money;
+  });
+  updateDom();
+};
+// sort by poorest
+const sortReverse = () => {
+  data = data.sort((a, b) => {
+    return a.money - b.money;
+  });
   updateDom();
 };
 
@@ -61,3 +76,5 @@ const formatMoney = (amount) => {
 // add event listeners
 addUserBtn.addEventListener("click", getRandomUser);
 doubleBtn.addEventListener("click", doubleMoney);
+sortBtn.addEventListener("click", sort);
+sortBtn.addEventListener("dblclick", sortReverse);
