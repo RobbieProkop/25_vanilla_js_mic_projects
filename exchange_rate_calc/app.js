@@ -12,11 +12,16 @@ const swap = document.getElementById("swap");
 const calculate = async () => {
   const currency1Value = currency1.value;
   const currency2Value = currency2.value;
-  console.log("currency1Value :>> ", currency1Value, currency2Value);
-  // const res = await fetch(
-  //   `https://v6.exchangerate-api.com/v6/dc7e381b18f065120774ccd1/latest/${currency}`
-  // );
-  // console.log("res :>> ", res.json());
+
+  const res = await fetch(
+    `https://v6.exchangerate-api.com/v6/dc7e381b18f065120774ccd1/latest/${currency1Value}`
+  );
+  const data = await res.json();
+
+  const conversion = data.conversion_rates[currency2Value];
+
+  rate.innerText = `1 ${currency1Value} = ${conversion} ${currency2Value}`;
+  amount2.value = (amount1.value * +conversion).toFixed(2);
 };
 
 //event listeners
@@ -25,4 +30,4 @@ amount1.addEventListener("input", calculate);
 currency2.addEventListener("change", calculate);
 amount2.addEventListener("input", calculate);
 
-calculate("USD");
+calculate();
