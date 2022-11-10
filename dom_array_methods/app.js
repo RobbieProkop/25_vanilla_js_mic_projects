@@ -48,6 +48,12 @@ const sortReverse = () => {
   updateDom();
 };
 
+const filterMillionaire = () => {
+  data = data.filter((millionaire) => millionaire.money > 999999);
+  // return data;
+  updateDom();
+};
+
 //Add new OBJ to data arr
 const addData = (obj) => {
   data.push(obj);
@@ -78,3 +84,4 @@ addUserBtn.addEventListener("click", getRandomUser);
 doubleBtn.addEventListener("click", doubleMoney);
 sortBtn.addEventListener("click", sort);
 sortBtn.addEventListener("dblclick", sortReverse);
+showMillionairesBtn.addEventListener("click", filterMillionaire);
