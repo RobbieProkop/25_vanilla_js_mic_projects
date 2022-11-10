@@ -1,4 +1,11 @@
 //create dom elements
+const currency1 = document.getElementById("currency-1");
+const currency2 = document.getElementById("currency-2");
+const amount1 = document.getElementById("amount-1");
+const amount2 = document.getElementById("amount-2");
+
+const rate = document.getElementById("rate");
+const swap = document.getElementById("swap");
 
 //functions
 const calculate = async (currency) => {
