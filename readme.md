@@ -20,6 +20,10 @@
 
 <!-- <img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/form_validator/form.png" /> -->
 
+## Dom Array Methods Practice
+
+<img src="https://github.com/RobbieProkop/25_vanilla_js_micro_projects/blob/master/dom_array_methods/dom_array_screen.png" />
+
 ## Exchange Rate Calculator
 
 <img src="https://github.com/RobbieProkop/25_vanilla_js_micro_projects/blob/master/exchange_rate_calc/img/exchange-screen.png" />
