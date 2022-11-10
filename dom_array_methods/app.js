@@ -24,6 +24,15 @@ const getRandomUser = async () => {
   addData(newUser);
 };
 
+// Double every user's money
+const doubleMoney = () => {
+  data = data.map((item) => {
+    return { ...item, money: item.money * 2 };
+  });
+
+  updateDom();
+};
+
 //Add new OBJ to data arr
 const addData = (obj) => {
   data.push(obj);
@@ -31,7 +40,7 @@ const addData = (obj) => {
   updateDom();
 };
 
-// update the dom
+// update the dom FOR EACH
 const updateDom = (providedData = data) => {
   // clear main div
   main.innerHTML = "<h2><strong>Person</strong> Wealth</h2>";
@@ -51,3 +60,4 @@ const formatMoney = (amount) => {
 
 // add event listeners
 addUserBtn.addEventListener("click", getRandomUser);
+doubleBtn.addEventListener("click", doubleMoney);
