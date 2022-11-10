@@ -24,10 +24,19 @@ const calculate = async () => {
   amount2.value = (amount1.value * +conversion).toFixed(2);
 };
 
+const swapCurrency = (e) => {
+  e.preventDefault();
+  const temp = currency1.value;
+  currency1.value = currency2.value;
+  currency2.value = temp;
+  calculate();
+};
+
 //event listeners
 currency1.addEventListener("change", calculate);
 amount1.addEventListener("input", calculate);
 currency2.addEventListener("change", calculate);
 amount2.addEventListener("input", calculate);
+swap.addEventListener("click", swapCurrency);
 
 calculate();
