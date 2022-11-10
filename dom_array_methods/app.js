@@ -50,7 +50,4 @@ const formatMoney = (amount) => {
 };
 
 // add event listeners
-
-getRandomUser();
-getRandomUser();
-getRandomUser();
+addUserBtn.addEventListener("click", getRandomUser);
