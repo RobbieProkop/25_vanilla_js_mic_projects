@@ -22,4 +22,30 @@ body {
   width: 800px;
 }
 
-aside
+aside {
+  padding: 10px 20px;
+  width: 250px;
+  border-right: 1px solid #fff;
+  margin-right: 10px;
+}
+
+button {
+  background-color: #e29b27;
+  border: none;
+  padding: 12px 5px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #cf650f;
+}
+
+main {
+  flex: 1;
+  padding: 10px 20px;
+}
