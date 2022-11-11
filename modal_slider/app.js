@@ -4,9 +4,14 @@ const open = document.getElementById("open");
 const modal = document.getElementById("modal");
 
 // Toggle Nav
-toggle.addEventListener("click", () =>
-  document.body.classList.toggle("show-nav")
-);
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("show-nav");
+  if (document.body.classList.contains("show-nav")) {
+    toggle.innerHTML = '<i class="fa fa-times fa-2x"></i>';
+  } else {
+    toggle.innerHTML = '<i class="fa fa-bars fa-2x"></i>';
+  }
+});
 
 // show Modal
 open.addEventListener("click", () => modal.classList.add("show-modal"));
