@@ -127,6 +127,7 @@ header {
   left: 0;
   bottom: 0;
   right: 0;
+  animation: modalcontainer $modal-duration ease-in;
 
   &.show-modal {
     display: block;
@@ -143,6 +144,7 @@ header {
     transform: translate(-50%, -50%);
     max-width: 100%;
     width: 400px;
+    animation: modalopen $modal-duration ease-in;
 
     .modal-header {
       background-color: $primary-color;
@@ -180,5 +182,25 @@ header {
       top: 0;
       right: 0;
     }
+  }
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalcontainer {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  to {
+    background-color: rgba(0, 0, 0, 0.6);
   }
 }
