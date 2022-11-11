@@ -40,6 +40,10 @@
 
 <!-- <img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/weather_app/screen_shot_1.png" /> -->
 
+## Modal & Sidebar Slider
+
+<img src="https://github.com/RobbieProkop/25_vanilla_js_micro_projects/blob/master/modal_slider/modal.png" />
+
 ## Number Guesser Game
 
 <!-- <img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/weather_app/screen_shot_1.png" /> -->
