@@ -5,26 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../public/styles/modal.css" />
-    <script defer src="./app.js"></script>
-    <title>Modal & Slider</title>
-  </head>
-  <body>
-    <h1>Modal and Slider for landing page</h1>
-  </body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../public/styles/modal.css" />
     <script
       defer
       src="https://kit.fontawesome.com/d13e26e731.js"
       crossorigin="anonymous"
     ></script>
-    <script src="app.js"></script>
+    <script defer src="app.js"></script>
     <title>Modal Slider</title>
   </head>
   <body>
@@ -53,5 +39,103 @@
 
       <button id="open" class="cta-btn">Sign Up</button>
     </header>
+
+    <div class="container">
+      <h2>Creative Hairstylist Landing Page</h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut saepe odio
+        dolores ab quo consequatur deleniti, eveniet pariatur iste expedita
+        error exercitationem dolorem! Repellat numquam quisquam nemo id quae
+        ducimus.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis maxime
+        aspernatur ipsa repellendus aperiam neque earum, maiores error molestiae
+        autem.
+      </p>
+      <h2>Tell Me More</h2>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur
+        soluta a quia doloremque, quibusdam tenetur temporibus suscipit!
+        Reiciendis, facilis voluptate. Libero deleniti commodi totam. Odit
+        reprehenderit eaque id omnis error doloremque molestias, quo quod harum
+        amet repellendus ad expedita assumenda!
+      </p>
+
+      <h2>Benefits</h2>
+      <ul>
+        <li>Lifetime Access</li>
+        <li>30 Day Money Back</li>
+        <li>Tailored customer Support</li>
+      </ul>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+        iure natus minima ipsum facere cumque accusamus exercitationem, adipisci
+        deserunt quae distinctio voluptates veniam magnam facilis dolore
+        voluptas similique esse, maxime mollitia saepe nobis maiores! In ratione
+        molestiae explicabo exercitationem rem alias recusandae cumque ipsam
+        tenetur nihil dicta modi corporis debitis voluptates, magni, porro
+        doloribus, quo dolorem repellat fugiat voluptas laboriosam neque optio
+        ex? Corrupti, sed provident recusandae dignissimos quisquam iste!
+      </p>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-container" id="modal">
+      <div class="modal">
+        <button class="close-btn" id="close">
+          <i class="fa fa-times"></i>
+        </button>
+        <div class="modal-header">
+          <h3>Sign Up</h3>
+        </div>
+        <div class="modal-content">
+          <p>
+            Register to get weekly updates and tips for proper hair treatment
+          </p>
+
+          <form class="modal-form">
+            <div>
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                class="form-input"
+                placeholder="Enter Your Name"
+              />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                class="form-input"
+                placeholder="Enter Your Email"
+              />
+            </div>
+            <div>
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                class="form-input"
+                placeholder="Enter Your Password"
+              />
+            </div>
+            <div>
+              <label for="password2">Confirm Password</label>
+              <input
+                type="password"
+                id="password2"
+                class="form-input"
+                placeholder="Confirm Your Password"
+              />
+            </div>
+            <input type="submit" value="Submit" class="submit-btn" />
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
