@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
+// variables
+$modal-duration: 1s;
+$primary-color: #30336b;
+$secondary-color: #be2edd;
+
 * {
   margin: 0;
   padding: 0;
@@ -7,5 +12,17 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
+}
+
+nav {
+  background-color: $primary-color;
+  border-right: 2px solid rgba(200, 200, 200, 0.1);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  z-index: 100;
 }
