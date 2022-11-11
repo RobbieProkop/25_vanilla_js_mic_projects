@@ -15,6 +15,13 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
 nav {
   background-color: $primary-color;
   border-right: 2px solid rgba(200, 200, 200, 0.1);
@@ -39,8 +46,6 @@ nav {
   }
 
   ul {
-    list-style-type: none;
-
     li {
       border-bottom: 2px solid rgba(200, 200, 200, 0.1);
       padding: 20px;
@@ -93,7 +98,16 @@ header {
     top: 20px;
     left: 20px;
   }
+
+  .cta-btn {
+    padding: 12px 30px;
+    font-size: 20px;
+  }
 }
 
 .container {
+  padding: 15px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 800px;
 }
