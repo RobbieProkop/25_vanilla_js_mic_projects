@@ -132,5 +132,34 @@ header {
     transform: translate(-50%, -50%);
     max-width: 100%;
     width: 400px;
+
+    .modal-header {
+      background-color: $primary-color;
+      color: #fff;
+      padding: 15px;
+
+      h3 {
+        border-bottom: 1px solid #333;
+      }
+    }
+    .modal-content {
+      padding: 20px;
+    }
+
+    .modal-form {
+      div {
+        margin: 15px 0;
+
+        label {
+          display: block;
+          margin-bottom: 5px;
+        }
+
+        .form-input {
+          padding: 8px;
+          width: 100%;
+        }
+      }
+    }
   }
 }
