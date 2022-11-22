@@ -20,7 +20,7 @@
 
 ## Custom Video Player
 
-<img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/custom_video_player/custom-video-screen-shot.png" />
+<img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/custom_video_player/img/custom-video-screen-shot.png" />
 
 ## Dom Array Methods Practice
 
@@ -40,7 +40,7 @@
 
 ## Loan Calculator
 
-<!-- <img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/weather_app/screen_shot_1.png" /> -->
+<img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/loan_calculator/img/screen_1.png" />
 
 ## Modal & Sidebar Slider
 
