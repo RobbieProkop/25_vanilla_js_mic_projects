@@ -1,5 +1,7 @@
 # 25 Vanilla JavaScript Apps
 
+# <i>Still in Progress. Projects with a screenshot are complete</i>
+
 ### Built entirely with vanilla JS, HTML, and SASS
 
 <p>(For a few projects, I use Bootstrap/skeleton)</p>
