@@ -1,5 +1,7 @@
 # 25 Vanilla JavaScript Apps
 
+# <i>Still in Progress. Projects with a screenshot are complete</i>
+
 ### Built entirely with vanilla JS, HTML, and SASS
 
 <p>(For a few projects, I use Bootstrap/skeleton)</p>
@@ -18,7 +20,7 @@
 
 ## Custom Video Player
 
-<!-- <img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/form_validator/form.png" /> -->
+<img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/custom_video_player/img/custom-video-screen-shot.png" />
 
 ## Dom Array Methods Practice
 
@@ -34,11 +36,11 @@
 
 ## Github Finder
 
-<!-- <img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/weather_app/screen_shot_1.png" /> -->
+<img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/github_finder/github-finder.png" />
 
 ## Loan Calculator
 
-<!-- <img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/weather_app/screen_shot_1.png" /> -->
+<img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/loan_calculator/img/screen_1.png" />
 
 ## Modal & Sidebar Slider
 
