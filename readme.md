@@ -40,7 +40,7 @@
 
 ## Loan Calculator
 
-<img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/loan_calculator/img/screen_1.png" />
+<img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/loan_calculator/img/screen-1.png" />
 
 ## Modal & Sidebar Slider
 
@@ -48,4 +48,4 @@
 
 ## Number Guesser Game
 
-<!-- <img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/weather_app/screen_shot_1.png" /> -->
+<img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/number_guesser/screen-1.png" />
