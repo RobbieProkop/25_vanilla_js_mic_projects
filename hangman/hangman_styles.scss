@@ -4,11 +4,17 @@ body {
 }
 
 .game-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
   .figure-container {
     // for head
     fill: transparent;
 
     // for lines
     stroke: #fff;
+    stroke-width: 4px;
+    stroke-linecap: round;
   }
 }
