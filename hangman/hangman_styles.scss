@@ -1,0 +1,14 @@
+body {
+  color: white;
+  background: #000;
+}
+
+.game-container {
+  .figure-container {
+    // for head
+    fill: transparent;
+
+    // for lines
+    stroke: #fff;
+  }
+}
