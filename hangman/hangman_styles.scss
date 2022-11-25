@@ -8,6 +8,7 @@ body {
   width: 100%;
   align-items: center;
   justify-content: center;
+  height: 100vh;
   .figure-container {
     // for head
     fill: transparent;
@@ -16,5 +17,6 @@ body {
     stroke: #fff;
     stroke-width: 4px;
     stroke-linecap: round;
+    height: 100%;
   }
 }
