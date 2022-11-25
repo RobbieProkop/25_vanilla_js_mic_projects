@@ -18,5 +18,9 @@ body {
     stroke-width: 4px;
     stroke-linecap: round;
     height: 100%;
+
+    .figure-part {
+      display: none;
+    }
   }
 }
