@@ -9,32 +9,22 @@ const figureParts = document.querySelectorAll(".figure-part");
 let selectedWord;
 
 const getWord = async () => {
-  // const res = await axios.get(
-  //   "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=true&minCorpusCount=0&minLength=5&maxLength=15&limit=1&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5"
-  // );
-  // const data = await res.json();
   const res = await fetch(
     "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=true&minCorpusCount=0&minLength=5&maxLength=15&limit=1&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5"
-    // {
-    //   mode: "cors",
-    // }
   );
   const data = await res.json();
-  // const word = await data.json();
-  // console.log("word", word);
   selectedWord = data[0].word;
 };
 
-const words = [
-  "application",
-  "data-structure",
-  "programmer",
-  "web-developer",
-  // "meme-time",
-];
-
 let disable = false;
 
+// const words = [
+//   "application",
+//   "data-structure",
+//   "programmer",
+//   "web-developer",
+//   // "meme-time",
+// ];
 // let selectedWord = words[Math.floor(Math.random() * words.length)];
 
 const correctLetters = ["-"];
@@ -50,8 +40,6 @@ const displayWord = async () => {
       .split("")
       .map(
         (letter) =>
-          // if (letter === " " && !correctLetters.includes(letter))
-          //   correctLetters.push(letter);
           `
       <span class="letter">
         ${correctLetters.includes(letter) ? letter : ""}
@@ -87,8 +75,7 @@ const updateWrongLettersEl = () => {
 
   // check if lost
   if (wrongLetters.length === figureParts.length) {
-    finalMessage.innerText =
-      "You suck! Now get your poop in a group and go do something productive";
+    finalMessage.innerText = `The word was ${selectedWord}! Now get your poop in a group and go do something productive`;
     popup.style.display = "flex";
     disable = true;
   }
