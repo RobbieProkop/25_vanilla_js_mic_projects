@@ -48,7 +48,10 @@ const displayWord = () => {
 };
 
 const updateWrongLettersEl = () => {
-  console.log("update wrong");
+  wrongLettersEl.innerHTML = `
+    ${wrongLetters.length > 0 ? "<p>Wrong</p>" : ""}
+    ${wrongLetters.map((letter) => `<span>${letter}</span>`)}
+  `;
 };
 
 const showNotification = (message) => {
@@ -66,18 +69,16 @@ window.addEventListener("keydown", (e) => {
   let letter = null;
   if (e.keyCode >= 65 && e.keyCode <= 90) letter = e.key;
   console.log("letter", letter);
-  if (letter === null) return showNotification("letter not valid");
+  if (letter === null) return showNotification("Letter not valid");
   if (!selectedWord.includes(letter) && !wrongLetters.includes(letter)) {
     wrongLetters.push(letter);
-    updateWrongLettersEl();
-    return;
+    return updateWrongLettersEl();
   }
   if (!selectedWord.includes(letter) && wrongLetters.includes(letter))
     return showNotification("Letter has already been guessed");
   if (!correctLetters.includes(letter)) {
     correctLetters.push(letter);
-    displayWord();
-    return;
+    return displayWord();
   }
   showNotification("Letter has already been guessed");
 });
