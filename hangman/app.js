@@ -46,6 +46,7 @@ const displayWord = () => {
     finalMessage.innerText =
       "Good for you, you got it. Now go do something productive";
     popup.style.display = "flex";
+    disable = true;
   }
 };
 
