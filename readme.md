@@ -38,6 +38,10 @@
 
 <img src="https://github.com/RobbieProkop/25_vanilla_js_mic_projects/blob/master/github_finder/github-finder.png" />
 
+## Hangman
+
+<img src="https://github.com/RobbieProkop/25_vanilla_js_micro_projects/blob/master/hangman/hangman.png" />
+
 ## Loan Calculator
 
 <img src="https://github.com/RobbieProkop/25_vanilla_js_micro_projects/blob/master/loan_calculator/img/screen-1.png" />
