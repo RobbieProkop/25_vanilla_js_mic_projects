@@ -15,6 +15,10 @@ body {
   overflow: hidden;
 }
 
+h1 {
+  margin-top: 2rem;
+}
+
 .game-container {
   // display: flex;
   // width: 100%;
@@ -55,6 +59,26 @@ body {
 
     span {
       font-size: 1.5rem;
+    }
+  }
+
+  .word {
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .letter {
+      border-bottom: 3px solid #2980b9;
+      display: inline-flex;
+      font-size: 2rem;
+      // padding: 0 10px;
+      align-items: center;
+      justify-content: center;
+      margin: 0 5px;
+      height: 50px;
+      width: 20px;
     }
   }
 }
