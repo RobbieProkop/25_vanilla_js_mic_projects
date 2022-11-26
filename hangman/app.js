@@ -12,7 +12,7 @@ const words = [
   "data-structure",
   "programmer",
   "web-developer",
-  "meme-time",
+  // "meme-time",
 ];
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
@@ -46,6 +46,31 @@ const displayWord = () => {
     popup.style.display = "flex";
   }
 };
+
+const updateWrondLettersEl = () => {};
+
+const showNotification = () => {};
+
+// key down event listning for letter press
+window.addEventListener("keydown", (e) => {
+  // if (e.keyCode >= 65 && e.keyCode <= 90)
+  let letter = /[a-z]/i;
+  const match = e.key.match(letter);
+  if (!match) return;
+  if (!selectedWord.includes(letter)) return;
+  if (!wrongLetters.includes(letter)) {
+    wrongLetters.push(letter);
+    updateWrondLettersEl();
+    return;
+  }
+  if (wrongLetters.includes(letter)) return;
+  if (!correctLetters.includes(letter)) {
+    correctLetters.push(letter);
+    displayWord();
+    return;
+  }
+  showNotification();
+});
 
 // runs after every guess
 displayWord();
