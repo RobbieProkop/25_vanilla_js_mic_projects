@@ -4,8 +4,26 @@ const playAgainBtn = document.getElementById("play-button");
 const popup = document.getElementById("popup-container");
 const notification = document.getElementById("notification-container");
 const finalMessage = document.getElementById("final-message");
-
 const figureParts = document.querySelectorAll(".figure-part");
+
+let selectedWord;
+
+const getWord = async () => {
+  // const res = await axios.get(
+  //   "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=true&minCorpusCount=0&minLength=5&maxLength=15&limit=1&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5"
+  // );
+  // const data = await res.json();
+  const res = await fetch(
+    "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=true&minCorpusCount=0&minLength=5&maxLength=15&limit=1&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5"
+    // {
+    //   mode: "cors",
+    // }
+  );
+  const data = await res.json();
+  // const word = await data.json();
+  // console.log("word", word);
+  selectedWord = data[0].word;
+};
 
 const words = [
   "application",
@@ -17,13 +35,16 @@ const words = [
 
 let disable = false;
 
-let selectedWord = words[Math.floor(Math.random() * words.length)];
+// let selectedWord = words[Math.floor(Math.random() * words.length)];
 
 const correctLetters = ["-"];
 const wrongLetters = [];
 
 // show the hidden word
-const displayWord = () => {
+const displayWord = async () => {
+  if (!selectedWord) {
+    await getWord();
+  }
   wordEl.innerHTML = `
     ${selectedWord
       .split("")
@@ -104,14 +125,15 @@ window.addEventListener("keydown", (e) => {
 });
 
 // restart game to play again
-playAgainBtn.addEventListener("click", (e) => {
+playAgainBtn.addEventListener("click", async (e) => {
   e.preventDefault();
+  await getWord();
 
   // Empty Arrays
   correctLetters.splice(1);
   wrongLetters.splice(0);
 
-  selectedWord = words[Math.floor(Math.random() * words.length)];
+  // selectedWord = words[Math.floor(Math.random() * words.length)];
   displayWord();
   console.log("wrongLetters", wrongLetters);
 
@@ -119,6 +141,8 @@ playAgainBtn.addEventListener("click", (e) => {
   popup.style.display = "none";
   disable = false;
 });
+
+getWord();
 
 // runs after every guess
 displayWord();
