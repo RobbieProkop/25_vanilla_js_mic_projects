@@ -17,7 +17,7 @@ const words = [
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
-const correctLetters = ["-", "e", "m", "i", "t"];
+const correctLetters = ["-"];
 const wrongLetters = [];
 
 // show the hidden word
@@ -47,12 +47,15 @@ const displayWord = () => {
   }
 };
 
-const updateWrondLettersEl = () => {
+const updateWrongLettersEl = () => {
   console.log("update wrong");
 };
 
-const showNotification = () => {
+const showNotification = (message) => {
   notification.classList.add("show");
+  notification.innerHTML = `
+    <p>${message}</p>
+  `;
   setTimeout(() => {
     notification.classList.remove("show");
   }, 2000);
@@ -63,20 +66,20 @@ window.addEventListener("keydown", (e) => {
   let letter = null;
   if (e.keyCode >= 65 && e.keyCode <= 90) letter = e.key;
   console.log("letter", letter);
-  if (!letter) return;
-  if (!selectedWord.includes(letter)) return;
-  if (!wrongLetters.includes(letter)) {
+  if (letter === null) return showNotification("letter not valid");
+  if (!selectedWord.includes(letter) && !wrongLetters.includes(letter)) {
     wrongLetters.push(letter);
-    updateWrondLettersEl();
+    updateWrongLettersEl();
     return;
   }
-  if (wrongLetters.includes(letter)) return;
+  if (!selectedWord.includes(letter) && wrongLetters.includes(letter))
+    return showNotification("Letter has already been guessed");
   if (!correctLetters.includes(letter)) {
     correctLetters.push(letter);
     displayWord();
     return;
   }
-  showNotification();
+  showNotification("Letter has already been guessed");
 });
 
 // runs after every guess
