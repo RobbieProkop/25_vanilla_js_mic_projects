@@ -47,16 +47,23 @@ const displayWord = () => {
   }
 };
 
-const updateWrondLettersEl = () => {};
+const updateWrondLettersEl = () => {
+  console.log("update wrong");
+};
 
-const showNotification = () => {};
+const showNotification = () => {
+  notification.classList.add("show");
+  setTimeout(() => {
+    notification.classList.remove("show");
+  }, 2000);
+};
 
 // key down event listning for letter press
 window.addEventListener("keydown", (e) => {
-  // if (e.keyCode >= 65 && e.keyCode <= 90)
-  let letter = /[a-z]/i;
-  const match = e.key.match(letter);
-  if (!match) return;
+  let letter = null;
+  if (e.keyCode >= 65 && e.keyCode <= 90) letter = e.key;
+  console.log("letter", letter);
+  if (!letter) return;
   if (!selectedWord.includes(letter)) return;
   if (!wrongLetters.includes(letter)) {
     wrongLetters.push(letter);
