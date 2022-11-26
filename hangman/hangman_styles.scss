@@ -130,5 +130,10 @@ h1 {
   padding: 1rem 1.2rem;
   border-radius: 10px 10px 0 0;
   position: absolute;
-  bottom: -300px;
+  bottom: -200px;
+  transition: transform 0.3s ease-in-out;
+
+  &.show {
+    transform: translateY(-300px);
+  }
 }
