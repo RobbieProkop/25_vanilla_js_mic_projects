@@ -15,6 +15,8 @@ const words = [
   // "meme-time",
 ];
 
+let disable = false;
+
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
 const correctLetters = ["-"];
@@ -48,16 +50,26 @@ const displayWord = () => {
 };
 
 const updateWrongLettersEl = () => {
+  // display wrong letters
   wrongLettersEl.innerHTML = `
     ${wrongLetters.length > 0 ? "<p>Wrong</p>" : ""}
     ${wrongLetters.map((letter) => `<span>${letter}</span>`)}
   `;
 
+  // display hanging man
   figureParts.forEach((part, index) => {
     const errors = wrongLetters.length;
     if (index > errors) return (part.style.display = "none");
     if (index < errors) return (part.style.display = "block");
   });
+
+  // check if lost
+  if (wrongLetters.length === figureParts.length) {
+    finalMessage.innerText =
+      "You suck! Now get your poop in a group and go do something productive";
+    popup.style.display = "flex";
+    disable = true;
+  }
 };
 
 const showNotification = (message) => {
@@ -73,6 +85,7 @@ const showNotification = (message) => {
 // key down event listning for letter press
 window.addEventListener("keydown", (e) => {
   let letter = null;
+  if (disable) return;
   if (e.keyCode >= 65 && e.keyCode <= 90) letter = e.key;
   console.log("letter", letter);
   if (letter === null) return showNotification("Letter not valid");
@@ -89,5 +102,8 @@ window.addEventListener("keydown", (e) => {
   showNotification("Letter has already been guessed");
 });
 
+// if (disable) {
+//   window.removeEventListener("keydown", () => {});
+// }
 // runs after every guess
 displayWord();
