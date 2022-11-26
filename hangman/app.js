@@ -1,6 +1,6 @@
 const wordEl = document.getElementById("word");
 const wrongLettersEl = document.getElementById("wrong-letters");
-const playAgainBtn = document.getElementById("play-again");
+const playAgainBtn = document.getElementById("play-button");
 const popup = document.getElementById("popup-container");
 const notification = document.getElementById("notification-container");
 const finalMessage = document.getElementById("final-message");
@@ -60,7 +60,7 @@ const updateWrongLettersEl = () => {
   // display hanging man
   figureParts.forEach((part, index) => {
     const errors = wrongLetters.length;
-    if (index > errors) return (part.style.display = "none");
+    if (index >= errors) return (part.style.display = "none");
     if (index < errors) return (part.style.display = "block");
   });
 
@@ -103,8 +103,22 @@ window.addEventListener("keydown", (e) => {
   showNotification("Letter has already been guessed");
 });
 
-// if (disable) {
-//   window.removeEventListener("keydown", () => {});
-// }
+// restart game to play again
+playAgainBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  // Empty Arrays
+  correctLetters.splice(1);
+  wrongLetters.splice(0);
+
+  selectedWord = words[Math.floor(Math.random() * words.length)];
+  displayWord();
+  console.log("wrongLetters", wrongLetters);
+
+  updateWrongLettersEl();
+  popup.style.display = "none";
+  disable = false;
+});
+
 // runs after every guess
 displayWord();
