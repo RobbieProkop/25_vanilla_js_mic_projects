@@ -86,7 +86,7 @@ h1 {
   bottom: 0;
   left: 0;
   right: 0;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 
@@ -106,13 +106,29 @@ h1 {
       margin-top: 20px;
       border: 1px solid #2980b9;
       transition: all 0.3s ease-in;
+      font-size: 1rem;
+
+      &:active {
+        transform: scale(0.98);
+      }
+
+      &:focus {
+        outline: 0;
+      }
 
       &:hover {
         background-color: #2980b9;
         color: #fff;
         border: 1px solid #333;
-        transform: translate(5px, -5px);
       }
     }
   }
+}
+
+.notification-container {
+  background-color: rgba(161, 159, 159, 0.3);
+  padding: 1rem 1.2rem;
+  border-radius: 10px 10px 0 0;
+  position: absolute;
+  bottom: -300px;
 }
