@@ -52,6 +52,11 @@ input[type="text"] {
   margin-left: 10px;
 }
 
+.error {
+  color: red;
+  font-size: 2rem;
+}
+
 @media (max-width: 800px) {
 }
 @media (max-width: 700px) {
