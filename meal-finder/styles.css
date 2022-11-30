@@ -56,6 +56,10 @@ input[type="text"] {
   color: red;
   font-size: 2rem;
 }
+.success {
+  color: green;
+  font-size: 2rem;
+}
 
 @media (max-width: 800px) {
 }

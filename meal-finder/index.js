@@ -6,13 +6,13 @@ const result = document.getElementById("result-heading");
 const single = document.getElementById("single-meal");
 const formContainer = document.getElementById("form-container");
 
-const notify = () => {
+const notify = (className, message) => {
   const alert = document.createElement("h2");
-  alert.classList.add("error");
-  alert.innerHTML = "Please Enter a Search";
+  alert.classList.add(className);
+  alert.innerHTML = message;
   formContainer.parentElement.insertBefore(alert, formContainer);
   setTimeout(() => {
-    document.querySelector(".error").remove();
+    document.querySelector(`.${className}`).remove();
   }, 2000);
 };
 
@@ -28,8 +28,9 @@ const searchMeal = (e) => {
 
   // check for empty submit
   if (!term.trim()) {
-    notify();
+    notify("error", "Please enter a search");
   }
+  notify("success", "Search found");
 
   console.log("term :>> ", term);
 };
