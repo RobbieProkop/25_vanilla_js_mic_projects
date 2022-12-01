@@ -34,6 +34,17 @@ const searchMeal = (e) => {
     .then((res) => res.json())
     .then((data) => {
       result.innerHTML = `<h2>Search results for ${term}: </h2>`;
+
+      if (!data.meals) {
+        return (result.innerHTML = `<p>There are no results. Try another keyword.</p>`);
+      }
+      meals.innerHTML = data.meals.map((meal) => {
+        `
+         <div class="meal">
+          <img src="${meal.strMealThumb}" />
+         <div> 
+        `;
+      });
     })
     .catch((err) => console.log("err >> ", err));
 };
