@@ -33,9 +33,9 @@ const searchMeal = (e) => {
   fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`)
     .then((res) => res.json())
     .then((data) => {
-      console.log("data :>> ", data);
-    });
-  .catch((err) => console.log("err >> ", err));
+      result.innerHTML = `<h2>Search results for ${term}: </h2>`;
+    })
+    .catch((err) => console.log("err >> ", err));
 };
 
 // event listeners
