@@ -30,9 +30,12 @@ const searchMeal = (e) => {
   if (!term.trim()) {
     notify("error", "Please enter a search");
   }
-  notify("success", "Search found");
-
-  console.log("term :>> ", term);
+  fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log("data :>> ", data);
+    });
+  .catch((err) => console.log("err >> ", err));
 };
 
 // event listeners
