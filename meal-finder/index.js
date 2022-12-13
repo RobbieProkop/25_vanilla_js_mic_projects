@@ -52,6 +52,9 @@ const searchMeal = (e) => {
           `
         )
         .join("");
+
+      // Clear Search text
+      search.value = "";
     })
     .catch((err) => console.log("err >> ", err));
 };
