@@ -94,6 +94,11 @@ input[type="text"] {
   justify-content: center;
   align-items: center;
   transition: opacity 0.2s ease-in;
+  opacity: 0;
+}
+
+.meal:hover .meal-info {
+  opacity: 1;
 }
 
 @media (max-width: 800px) {
